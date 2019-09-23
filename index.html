@@ -15,20 +15,45 @@
     <link rel="stylesheet" href="./style.css" />
     <title>| Secret Messages |</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <div class="logo">
-        <h1>S</h1>
-        <hr />
-        <h1>M</h1>
+    <div class="bgc">
+      <div class="wrapper">
+        <div class="wrapperGrid">
+          <div class="logo">
+            <h1>S</h1>
+            <hr />
+            <h1>M</h1>
+          </div>
+          <div class="textareaContenerEncrypt">
+            <textarea
+              class="textareaToEncrypt"
+              placeholder="Enter text to encrypt..."
+            ></textarea>
+          </div>
+          <button class="btnEncrypt">Encrypt</button>
+          <div class="manageConternerEncrypt">
+            <button class="copyEncrypt">Copy</button>
+            <button class="pasteEncrypt">Paste</button>
+          </div>
+          <div class="textareaContererDecrypt">
+            <textarea
+              class="textareaToDecrypt"
+              placeholder="Enter text to decrypt..."
+            ></textarea>
+          </div>
+          <button class="btnDecrypt">Decrypt</button>
+          <div class="manageConternerDecrypt">
+            <button class="copyDecrypt">Copy</button>
+            <button class="pasteDecrypt">Paste</button>
+          </div>
+
+          <footer>
+            <p>2019 | Designed and developed by: piotrjakubowski.pl</p>
+          </footer>
+        </div>
       </div>
-      <textarea placeholder="Enter text to encrypt..."></textarea>
-      <button>Encrypt<i class="fas fa-lock"></i></button>
-
-      <!-- <img class="logo" src="./sm.svg" alt="Logo Secret Messages" /> -->
-      <h2>Secret Messages</h2>
     </div>
-
     <script src="main.js"></script>
   </body>
 </html>
