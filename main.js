@@ -42,6 +42,8 @@ btnEncrypt.addEventListener("click", e => {
     e.preventDefault();
     if (encryptResult === "") {
       startEncrypting();
+    } else if (toEncrypt.value == " ") {
+      return null;
     } else {
       return null;
     }
@@ -105,8 +107,26 @@ const startEncrypting = () => {
         return index.replace(/y/g, "54");
       } else if (index === "z") {
         return index.replace(/z/g, "55");
+      } else if (index === "ą") {
+        return index.replace(/ą/g, "09");
+      } else if (index === "ć") {
+        return index.replace(/ć/g, "10");
+      } else if (index === "ę") {
+        return index.replace(/ę/g, "09");
+      } else if (index === "ń") {
+        return index.replace(/ń/g, "30");
+      } else if (index === "ó") {
+        return index.replace(/ó/g, "29");
+      } else if (index === "ś") {
+        return index.replace(/ś/g, "40");
+      } else if (index === "ź") {
+        return index.replace(/ź/g, "50");
+      } else if (index === "ż") {
+        return index.replace(/ż/g, "49");
       } else if (index === " ") {
         return "16";
+      } else {
+        return null;
       }
     };
     encryptedLetters.push(newStr(index));
@@ -210,6 +230,22 @@ const decryptConvert = () => {
         return index.replace(/54/g, "y");
       } else if (index === "55") {
         return index.replace(/55/g, "z");
+      } else if (index === "09") {
+        return index.replace(/09/g, "ą");
+      } else if (index === "10") {
+        return index.replace(/10/g, "ć");
+      } else if (index === "09") {
+        return index.replace(/09/g, "ę");
+      } else if (index === "30") {
+        return index.replace(/30/g, "ń");
+      } else if (index === "29") {
+        return index.replace(/29/g, "ó");
+      } else if (index === "40") {
+        return index.replace(/40/g, "ś");
+      } else if (index === "50") {
+        return index.replace(/50/g, "ź");
+      } else if (index === "49") {
+        return index.replace(/49/g, "ż");
       } else if (index === "16") {
         return " ";
       }
